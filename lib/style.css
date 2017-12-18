@@ -16,4 +16,15 @@ hr {
 
 #header {
 	background-color: lightblue;
+<<<<<<< HEAD
+=======
+}
+
+#result {
+	font-size: 35px;
+}
+
+.result {
+list-style: none;
+>>>>>>> develop
 }
