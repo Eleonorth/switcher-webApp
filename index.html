@@ -31,7 +31,7 @@
                         <input id='ip2' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> .
                         <input id='ip3' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> .
                         <input id='ip4' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> /
-                        <input id='cidr' class='ipfield'  type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" required>
+                        <input id='cidr' class='ipfield'  type="text" onkeyup="this.value=this.value.replace(/\D/g,'')">
                         <button name="calc" id="calc">Calculer</button>
                     </p>                          
                 </form>
@@ -40,9 +40,6 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <p id="result">
-                    blablabla
-                </p>
                 <ul class="result">
                     <li>
                         <h4 id="classe">Classe</h4>
