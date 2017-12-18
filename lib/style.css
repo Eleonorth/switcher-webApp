@@ -1,0 +1,19 @@
+.ipfield {
+	width: 100px;
+}
+
+#calc {
+	margin-left: 10px;
+}
+
+.col-lg-12, .col-md-12, .col-sm-12 {
+	text-align: center;
+}
+
+hr {
+	width: 100%;
+}
+
+#header {
+	background-color: lightblue;
+}

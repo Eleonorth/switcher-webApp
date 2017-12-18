@@ -2,22 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Adressage IP</title>
-    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <title>Switcher Web App</title>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/style.css">
 </head>
+
 <body>
-    <form method="POST" action="#"> <!-- Définit la méthode du formulaire et sa page d'action -->
-        <label>Entrez votre adresse IP</label>
-        <p>
-            <input id='ip1' class='ipfield'  type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required>.
-            <input id='ip2' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required>.
-            <input id='ip3' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required>.
-            <input id='ip4' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required>/
-            <input id='cidr' class='ipfield'  type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" required>
-        </p>
-        <button name="calc" id="calc">Calculer</button>
-    </form>
-    <script src="lib/jquery-3.2.1.js"></script>
-    <script type="text/javascript" src="lib/main.js"></script>
+	<div class = "container">
+
+		<div class="row">
+			<div id="header" class="col-lg-12 col-md-12 col-sm-12">
+				<h1>Calcul d'adressage IP</h1>                
+			</div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row">            
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <form method="POST" action="#"> <!-- Définit la méthode du formulaire et sa page d'action -->
+                <label>Entrez votre adresse IP</label>
+                    <p>
+                        <input id='ip1' class='ipfield'  type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> .
+                        <input id='ip2' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> .
+                        <input id='ip3' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> .
+                        <input id='ip4' class='ipfield' type="text"  onkeyup="this.value=this.value.replace(/\D/g,'')" required> /
+                        <input id='cidr' class='ipfield'  type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" required>
+                        <button name="calc" id="calc">Calculer</button>
+                    </p>                          
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <p id="result">
+                    blablabla
+                </p>
+            </div>
+        </div>
+
+        <script src="lib/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="lib/main.js"></script>
+    	
+    </div>
+
 </body>
+
 </html>
