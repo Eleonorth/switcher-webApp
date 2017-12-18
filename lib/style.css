@@ -7,13 +7,30 @@
 }
 
 .col-lg-12, .col-md-12, .col-sm-12 {
+	padding-top: 40px;
 	text-align: center;
 }
 
 #result {
-	font-size: 35px;
+	text-align: left;
+list-style: none;
 }
 
-.result {
-list-style: none;
+.bold-green {
+	color: #00a8ec;
+}
+
+#main {
+
+	background-color: rgba(0, 168, 236, 0.4);
+	border-radius: 7px;
+}
+
+p {
+	padding-top: 5px;
+}
+
+#logo {
+	padding-left: 10px;
+	width: 45px;
 }
