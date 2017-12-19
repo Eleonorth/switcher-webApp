@@ -24,14 +24,30 @@ list-style: none;
 	float: right;
 }
 
-#app {
-
+ul {
+	padding-left: 0;
 }
 
-#main {
+#mainDiv {
 	background-color: white;
 	padding-bottom: 100%;
+	border-radius: 2px;
 	margin-top: 80px;
+}
+
+.btn {
+background-color: #6ea7de;
+	color: rgb(255, 255, 255);
+}
+
+.btn:hover {
+	background-color: #5477A7;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#entrez {
+	font-size: larger;
+	padding-bottom: 10px;
 }
 
 p {

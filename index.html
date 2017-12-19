@@ -27,20 +27,21 @@
 </nav>
 
 	<div class = "container">
-        <section id="main">
+        <section id="mainDiv">
 
         <div class="row">            
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <form method="POST" action="#"> <!-- Définit la méthode du formulaire et sa page d'action -->
-                <label>Entrez votre adresse IP</label>
+                <label id =entrez>Entrez votre adresse IP</label>
                     <p>
                         <input id='ip1' class='ipfield'  type="text" required> .
                         <input id='ip2' class='ipfield' type="text" required> .
                         <input id='ip3' class='ipfield' type="text" required> .
                         <input id='ip4' class='ipfield' type="text" required> /
                         <input id='cidr' class='ipfield'  type="text" >
-                        <button name="calc" id="calc">Calculer</button>
-                    </p>                          
+                    </p>
+                    <br>
+                    <button name="calc" class="btn" id="calc">Lancer le calcul</button>
                 </form>
             </div>
         </div>
