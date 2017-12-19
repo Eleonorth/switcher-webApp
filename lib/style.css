@@ -51,7 +51,7 @@ background-color: #6ea7de;
 	color: rgb(255, 255, 255);
 }
 
-#entrez {
+.entrez {
 	font-size: larger;
 	padding-bottom: 10px;
 }
@@ -77,4 +77,31 @@ body {
 
 hr {
 	width: 75%;
+}
+
+.entrez>strong {
+	color: white;
+}
+
+.profile {
+	padding: 25px;
+}
+
+.profile_image {
+	height: 200px;
+	width: 200px;
+	margin: auto;
+	border-radius: 50%;
+	display: block;
+}
+
+.profile>p {
+	color: white;
+	padding: 10px;
+	margin: 0px;
+}
+
+.profile>p>i {
+	font-size: 50px;
+	margin: 10px;
 }
