@@ -17,7 +17,11 @@ list-style: none;
 }
 
 .bold-green {
-	color: #00a8ec;
+	color: #2858c4;
+}
+
+.valueRight {
+	float: right;
 }
 
 #app {
@@ -41,7 +45,10 @@ p {
 
 body {
 	height: 100%;
-	background-repeat: no-repeat;
 	background: url(../lib/Img/background.jpg) center;
-	-moz-background-size: cover;
+	background-size: cover;
+}
+
+#classe {
+	padding-top: 40px;
 }
