@@ -40,9 +40,10 @@ background-color: #6ea7de;
 	color: rgb(255, 255, 255);
 }
 
+
 .btn:hover {
 	background-color: #5477A7;
-	color: rgba(255, 255, 255, 0.7);
+	color: rgb(255, 255, 255);
 }
 
 #entrez {
