@@ -20,10 +20,14 @@ list-style: none;
 	color: #00a8ec;
 }
 
-#main {
+#app {
 
-	background-color: rgba(0, 168, 236, 0.4);
-	border-radius: 7px;
+}
+
+#main {
+	background-color: white;
+	padding-bottom: 100%;
+	margin-top: 80px;
 }
 
 p {
@@ -38,5 +42,6 @@ p {
 body {
 	height: 100%;
 	background-repeat: no-repeat;
-	background: url(../lib/Img/background.png) center;
+	background: url(../lib/Img/background.jpg) center;
+	-moz-background-size: cover;
 }
