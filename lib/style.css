@@ -11,6 +11,7 @@
 	padding: 0;
 	list-style: none;
 	transition: 0.2s;
+	font-size: 17px;
 }
 
 #result>li:hover {
@@ -59,6 +60,7 @@ footer {
 #calc {
 	background-color: #FC345C;
 	border: 0px;
+	margin-top: 20px;
 	color: #f8f9fa;
 	transition: 0.3s;
 }
