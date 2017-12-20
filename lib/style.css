@@ -29,7 +29,7 @@ ul {
 }
 
 .mainDiv {
-	background-color: white;
+	background-color: #f8f9fa;
 	border-radius: 2px;
 	margin-top: 80px;
 }
@@ -42,13 +42,13 @@ footer {
 
 .btn {
 background-color: #6ea7de;
-	color: rgb(255, 255, 255);
+	color: #f8f9fa
 }
 
 
 .btn:hover {
 	background-color: #5477A7;
-	color: rgb(255, 255, 255);
+	color: #f8f9fa;
 }
 
 .entrez {
@@ -80,7 +80,7 @@ hr {
 }
 
 .entrez>strong {
-	color: white;
+	color: #f8f9fa;
 }
 
 .profile {
@@ -104,12 +104,12 @@ hr {
 .profile>p {
 	padding: 10px;
 	margin: 0px;
-	color: white;
+	color: #f8f9fa;
 }
 
 .profile>p>a {
 	font-size: 50px;
 	margin: 10px;
 	text-decoration: none;
-	color: white;
+	color: #f8f9fa;
 }
