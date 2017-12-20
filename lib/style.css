@@ -8,7 +8,14 @@
 
 #result {
 	text-align: left;
-list-style: none;
+	padding: 0;
+	list-style: none;
+	transition: 0.2s;
+}
+
+#result>li:hover {
+	transition: 0.2s;
+	background-color: white;
 }
 
 .blue {
@@ -25,14 +32,14 @@ list-style: none;
 }
 
 ul {
-	padding-left: 0;
+	padding: 0;
 	margin: 0;
 }
 
 #formCalc {
 	background-color: #f8f9fa;
 	text-align: center;
-	padding: 10px;
+	padding: 40px;
 	border-radius: 2px;
 }
 
@@ -41,7 +48,6 @@ ul {
 	margin: auto;
 	margin-top: 0px;
 	margin-bottom: 210px;
-	padding: 25px;
 }
 
 footer {
@@ -89,12 +95,12 @@ body {
 }
 
 #classe {
-	padding-top: 40px;
+	margin-top: 40px;
 }
 
 #contact {
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 75px;
+	margin-bottom: 75px;
 }
 
 h2 {
