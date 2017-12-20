@@ -3,81 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Switcher Web App</title>
-    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="lib/style.css">
     <link rel="stylesheet" type="text/css" href="lib/font-awesome/css/font-awesome.css">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <p id="brand" class="navbar-brand" href="#">SWITCH<span class="bold-green">ER</span><img id="logo" src="./lib/Img/switcherlogo.png"></p>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Contact<span class="sr-only">(current)</span></a>
-            </li>
-        </ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">SWITCH<span class="blue">ER</span> </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">Contact</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
     </div>
 </nav>
 
 	<div class = "container">
-        <section class="mainDiv">
 
-        <div class="row">            
-            <div class="col-lg-12 col-md-12 col-sm-12">
-                <form method="POST" action="#"> <!-- Définit la méthode du formulaire et sa page d'action -->
-                <label class='entrez'>Entrez votre adresse IP</label>
-                    <p>
-                        <input id='ip1' class='ipfield'  type="text" required> .
-                        <input id='ip2' class='ipfield' type="text" required> .
-                        <input id='ip3' class='ipfield' type="text" required> .
-                        <input id='ip4' class='ipfield' type="text" required> /
-                        <input id='cidr' class='ipfield'  type="text" >
-                    </p>
-                    <br>
-                    <button name="calc" class="btn" id="calc">Lancer le calcul</button>
-                </form>
-            </div>
-        </div>
+        <h2>Entrez votre adresse Ip</h2>
+        <section class="mainDiv">
 
         <div class="row">
             <div class="col-lg-2 col-md-2 col-sm-2">
             </div>
-            <div id="app" class="col-lg-8 col-md-8 col-sm-8">
-                <ul id="result">
-                    <li id="res1">
-                        <p id="classe">Classe : <span id="resultClasse" class="valueRight"></span></p>
-                    </li>
-                    <li id="res2">
-                        <p id="type">Type : <span id="resultType" class="valueRight"></span></p>
-                    </li>
-                    <li id="res3">
-                        <p id="Masque">Masque de sous-réseau : <span id="resultMasque" class="valueRight"></span></p>
-                    </li>
-                    <li id="res4">
-                        <p id="NetID">NetID : <span id="resultNetID" class="valueRight"></span></p>
-                    </li>
-                    <li id="res5">
-                        <p id="PremierIP">Première adresse ip : <span id="resultPremierIP" class="valueRight"></span></p>
-                    </li>
-                    <li id="res6">
-                        <p id="NbIP">Nombre d'adresses ip disponibles : <span id="resultNbIP" class="valueRight"></span></p>
-                    </li>
-                    <li id="res7">
-                        <p id="DernierIP">Dernière adresse ip : <span id="resultDernierIP" class="valueRight"></span></p>
-                    </li>
-                    <li id="res8">
-                        <p id="Broadcast">Broadcast : <span id="resultBroadcast" class="valueRight"></span></p>
-                    </li>
-                </ul>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+                <form id = "formCalc"> <!-- Définit la méthode du formulaire et sa page d'action -->
+                    <p>
+                        <input id='ip1' class='ipfield' type="text" required><span class="blue"> .</span>
+                        <input id='ip2' class='ipfield' type="text" required><span class="blue"> .</span>
+                        <input id='ip3' class='ipfield' type="text" required><span class="blue"> .</span>
+                        <input id='ip4' class='ipfield' type="text" required><span class="blue"> /</span>
+                        <input id='cidr' class='ipfield'  type="text" >
+                    </p>
+                    <a href="#demo" id="calc" class="btn btn-info" data-toggle="collapse">Lancer le calcul</a>
+                    <div id="demo" class="collapse">
+                        <ul id="result">
+                            <li id="res1">
+                                <p id="classe">Classe : <span id="resultClasse" class="valueRight"></span></p>
+                            </li>
+                            <li id="res2">
+                                <p id="type">Type : <span id="resultType" class="valueRight"></span></p>
+                            </li>
+                            <li id="res3">
+                                <p id="Masque">Masque de sous-réseau : <span id="resultMasque" class="valueRight"></span></p>
+                            </li>
+                            <li id="res4">
+                                <p id="NetID">NetID : <span id="resultNetID" class="valueRight"></span></p>
+                            </li>
+                            <li id="res5">
+                                <p id="PremierIP">Première adresse ip : <span id="resultPremierIP" class="valueRight"></span></p>
+                            </li>
+                            <li id="res6">
+                                <p id="NbIP">Nombre d'adresses ip disponibles : <span id="resultNbIP" class="valueRight"></span></p>
+                            </li>
+                            <li id="res7">
+                                <p id="DernierIP">Dernière adresse ip : <span id="resultDernierIP" class="valueRight"></span></p>
+                            </li>
+                            <li id="res8">
+                                <p id="Broadcast">Broadcast : <span id="resultBroadcast" class="valueRight"></span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+
+
             </div>
+
 
             <div class="col-lg-2 col-md-2 col-sm-2">
             </div>
@@ -85,9 +86,10 @@
         <!-- Première page -->
         </section>
 
-        <div class="row">
-            <label class="entrez col-12 col-md-12 col-sm-12 col-xl-12 col-lg-12"><strong>Contact</strong></label>
-        </div>
+
+        <hr>
+            <h2 id="contact">Contact</h2>
+
         <div class="row">
             <div class="profile col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
                 <img src="lib/Img/elo.jpg" alt="" class="profile_image">
@@ -139,7 +141,7 @@
 </footer>
 
         <script src="lib/jquery-3.2.1.js"></script>
-        <script src="lib/bootstrap/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="lib/main.js"></script>
             <script type="text/javascript" src="lib/integration.js"></script>
 
