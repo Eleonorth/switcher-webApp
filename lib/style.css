@@ -24,6 +24,11 @@ list-style: none;
 	float: right;
 }
 
+#brand {
+	margin: 0;
+	padding: 0;
+}
+
 ul {
 	padding-left: 0;
 }
