@@ -113,9 +113,18 @@ h2 {
 	background-color: rgba(255, 255, 255, 0.25);
 }
 
+.profile:hover>.profile_image {
+	padding: 6px;
+	transition: 0.5s;
+	background-color: #FC345C;
+}
+
 .profile_image {
 	height: 200px;
 	width: 200px;
+	padding: 4px;
+	transition: 0.5s;
+	background-color: rgba(255, 255, 255, 0.6);
 	margin: auto;
 	border-radius: 50%;
 	display: block;
@@ -127,11 +136,17 @@ h2 {
 	color: #f8f9fa;
 }
 
-.profile>p>a { 			/* "profile qui a un enfant direct p, qui a un enfant direct a" */
+.profile>p>a {        /* "profile qui a un enfant direct p, qui a un enfant direct a" */
 	font-size: 50px;
 	margin: 10px;
 	text-decoration: none;
 	color: #f8f9fa;
+	transition: 0.3s;
+}
+
+.profile>p>a:hover {
+	transition: 0.3s;
+	color: #FC345C;
 }
 
 form>p>.blue {
