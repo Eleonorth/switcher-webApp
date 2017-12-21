@@ -62,7 +62,7 @@ footer {
 	padding-bottom: 15px;
 }
 
-#calc {
+#calc, #calc2 {
 	background-color: #FC345C;
 	border: 0px;
 	margin-top: 20px;
@@ -71,7 +71,7 @@ footer {
 }
 
 
-#calc:hover {
+#calc:hover #calc2:hover {
 	background-color: #DA162C;
 	color: #f8f9fa;
 	transition: 0.3s;
