@@ -1,0 +1,52 @@
+I - Recup IP dans 4 VARS
+	Récupération des quatre champs du formulaire contenant les quatre blocs IP dans des variables spécifique à chaques blocs
+II - Recup CIDR dans 1 VAR
+	Récupération du champs CIDR contenant le CIDR à utiliser pour notre calcul
+III - Si aucun CIDR entré, auto complétion
+	On vérifie qu'un CIDR à bien été rentré, sinon ont l'auto-complète avec le CIDR de base de la classe de l'adresse IP donnée
+IV - Test champs vide
+	On vérifie si les quatre blocs IP ont bien été renseigné
+V - Test max/min des champs
+	On vérifie si les quatres blocs IP sont bien compris entre 0 et 255 inclu
+VI - Test pour chiffre uniquement
+	On vérifie si il n'y a pas de lettre saisit dans les champs IP
+VII - Test si APIPA
+	On vérifie si l'adresse rentrée n'est pas une adresse réservée APIPA
+VIII - Verification des resultats des tests
+	On vérifie si toutes les vérifications ont été validées
+VIV - Concaténation des VARS IP dans IP BRUT
+	On concatène les différents blocs IP dans une variable IP brut afin qu'elle adopte la syntaxe XXX.XXX.XXX.XXX/XX
+X - Séparation du bloc IP et du bloc CIDR de l'IP XXX.XXX.XXX.XXX/XX (x appartient a l'intervalle [0;9])
+	On coupe ipbrut afin d'obtenir d'un coté l'adresse IP et de l'autre le CIDR
+XI - Création d'un tableau de 2 entrées contenant respectivement l'ip saisit et le masque sous forme binaire en 32bits
+	Syntaxe des deux chaines : XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX (x appartient a l'intervalle [0;1])
+XII - Calcul du NetID via le ET LOGIQUE entre IPsaisit et Masque et translation binaire -> décimal
+	On effectue une fonction logique (ET) entre le masque sous réseau et l'adresse IP renseigné afin d'en dégager son Net ID
+XIII - Calcul de la PremièreIP via le ET LOGIQUE entre IPsaisit et Masque et translation binaire -> décimal +1
+	On calcul la première adresse IP grâce au Net ID obtenu, en allant à l'adresse IP suivante
+XIV - Récupération de l'adresse IP de broadcast (NetID + IPHôte) sous formes XXX.XXX.XXX.1024/22 (exemple)
+	On calcul l'adresse IP de broadcast grâce au Net ID Obtenu en lui ajoutant NbHôte à son dernier bloc
+XV - Récupération de la dernière IP part l'adresse IP de broadcast (NetID + IPHôte - 1) sous formes XXX.XXX.XXX.1023/22 (exemple)
+	On calcul la dernière adresse ip du sous réseau grâce au Net ID Obtenu en lui ajoutant NbHôte-1 à son dernier bloc
+XVI - Fonction scope convertit XXX.XXX.XXX.1024 en XXX.XXX.XXX+4.0 (exemple)
+	On convertit les adresses IP de type XXX.XXX.XXX.1024 en XXX.XXX.XXX+4.0 si nécessaire
+XVII - On détermine la classe de l'ip grâce a ses deux premiers bloc IP
+XVIII - On détermine si l'IP est privée ou publique
+XVIV - On récupère le nombre d'hôte grâce à la fonction FindNbHôte
+XX - On affiche le résultats dans les divs html respectivent
+
+DefaultCidr -> Fais de l'auto complétion pour le cidr (cidr de base pour une classe donnée) si le champ n'est pa renseigné
+isEmpty -> Mets isAlerted a true si un des champs est vide (excepté le CIDR)
+octetLength -> Mets isAlerted a true si un des blocs IP dépasse la valeur 255 où est inférieur a 0
+VerifNBR -> Mets isAlerted a true et Vérifie si il n'y a que des chiffres qui ont été renseigné
+isAvailable -> Mets isAlerted a true et Vérifie si l'adresse entrée est disponible (donc != APIPA)
+GetBinMask -> Convert un CIDR en une chaine binaire de 32bits
+TransformIP -> Converti une ip de type XXX.XXX.XXX.XXX en chaine binaire de 32 bits
+EtLogique -> Effectue le ET LOGIQUE entre un masque en chaine de binaire 32 bits et une IP en chaine de binaire 32 bits
+CutMyBigBin -> Coupe une chaine de binaire 32bits en 4 Blocs de binaire 8 bits séparé par des '.'
+GimeIpDec -> Convertit une chaine de binaire 4x8bits séparé par des . sous le format XXX.XXX.XXX.XXX
+FindNbHost -> Récupère depuis le CIDR le nombre d'adresse disponible sur la plage
+Scope -> Convertit une ip de type 192.168.0.1024 en 192.168.4.0
+IpClass -> Retourne la classe d'une adresse IP
+isPrivate -> Retourne si une IP est privée ou public
+DoFade -> Affiche nos résultat dans des div ciblées

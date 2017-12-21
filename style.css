@@ -37,6 +37,11 @@ ul {
 	margin: 0;
 }
 
+@font-face {
+	font-family: "Nunito-Light";
+	src: local("lib/font-awesome/fonts/Nunito-Light.ttf"), url("lib/font-awesome/fonts/Nunito-Light.ttf") format("truetype");
+}
+
 #formCalc {
 	background-color: #f8f9fa;
 	text-align: center;
@@ -92,7 +97,7 @@ a.navbar-brand {
 
 body {
 	height: 100%;
-	background: url(../lib/Img/background.jpg) fixed;
+	background: url(./lib/img/background.jpg) fixed;
 	background-size: cover;
 	font-family: "Nunito-Light";
 }
@@ -164,9 +169,4 @@ form>p>.blue {
 
 form {
 	line-height: 25px;
-}
-
-@font-face {
-    font-family: "Nunito-Light";
-    src: local("font-awesome/fonts/Nunito-Light.ttf"), url("font-awesome/fonts/Nunito-Light.ttf") format("truetype");
 }
