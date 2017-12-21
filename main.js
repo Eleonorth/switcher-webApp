@@ -25,6 +25,7 @@ function DoFade(classeIp, typeIp, NetId, FirstIp, LastIp, Bdcast, NbHote, MaskDe
     $('#resultNbIP').text(NbHote);
     $('#resultDernierIP').text(LastIp[0] + "." + LastIp[1] + "." + LastIp[2] + "." + LastIp[3] + "/" + cidr);
     $('#resultBroadcast').text(Bdcast[0] + "." + Bdcast[1] + "." + Bdcast[2] + "." + Bdcast[3] + "/" + cidr);
+    isRectified = true;
 }
 
 // Fonction qui retourne la classe d'une adresse IP selon son masque CIDR
